@@ -28,6 +28,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSONAL_TOKEN}}
+          personal_token: ${{ secrets.PERSONAL_TOKEN}}
           publish_dir: ./dist/eliq-drinks-app  # This is your build output directory
           publish_branch: gh-pages  # This will publish to the gh-pages branch
