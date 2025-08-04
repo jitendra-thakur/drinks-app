@@ -1,0 +1,11 @@
+<!-- <mat-card class="drink-card" (click)="navigateToDrink()">
+    <img mat-card-image [src]="drink.strDrinkThumb" alt="Drink image" />
+    <mat-card-title>{{ drink.strDrink }}</mat-card-title>
+</mat-card> -->
+<div class="drink-card" (click)="navigateToDrink()">
+    <div class="image-container">
+        <img [src]="drink.strDrinkThumb" alt={{drink.strDrink}} class="drink-image">
+        <div class="badge">Best Seller</div>
+    </div>
+    <h3 class="drink-name">{{ drink.strDrink }}</h3>
+</div>

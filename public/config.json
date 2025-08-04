@@ -1,0 +1,41 @@
+{
+    "brand": {
+        "appName": "Eliq Drinks",
+        "logoUrl": ""
+    },
+    "navLinks": [
+        {
+            "label": "Home",
+            "path": "/"
+        },
+        {
+            "label": "About",
+            "path": "/about"
+        },
+        {
+            "label": "Contact",
+            "path": "/contact"
+        }
+    ],
+    "env": "production",
+    "environments": {
+        "development": {
+            "api": {
+                "baseUrl": "https://www.thecocktaildb.com/api/json/v1/1",
+                "endpoints": {
+                    "alcoholicDrinks": "/filter.php?a=Alcoholic",
+                    "drinkDetails": "/lookup.php?i="
+                }
+            }
+        },
+        "production": {
+            "api": {
+                "baseUrl": "https://www.thecocktaildb.com/api/json/v1/1",
+                "endpoints": {
+                    "alcoholicDrinks": "/filter.php?a=Alcoholic",
+                    "drinkDetails": "/lookup.php?i="
+                }
+            }
+        }
+    }
+}

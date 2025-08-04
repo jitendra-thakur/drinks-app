@@ -1,0 +1,41 @@
+<div class="drink-detail-wrapper" *ngIf="drink">
+  <div class="drink-detail-card">
+    <!-- LEFT: Image -->
+    <div class="drink-detail-image">
+      <img [src]="drink.strDrinkThumb" [alt]="drink.strDrink" />
+    </div>
+
+    <!-- RIGHT: Details -->
+    <div class="drink-detail-info">
+      <h1 class="drink-name">{{ drink.strDrink }}</h1>
+      <p class="drink-subtitle">
+        {{ drink.strCategory }} | {{ drink.strGlass }} | {{ drink.strAlcoholic }}
+      </p>
+
+      <!-- Ingredients -->
+      <div class="drink-section">
+        <h2>Ingredients</h2>
+        <ul class="ingredient-list">
+          <li *ngFor="let item of ingredients">{{ item }}</li>
+        </ul>
+      </div>
+
+      <!-- Language Selector -->
+      <div class="language-buttons">
+        <button
+          mat-button
+          *ngFor="let lang of availableLanguages"
+          [color]="lang.key === selectedLangKey ? 'primary' : undefined"
+          (click)="selectLanguage(lang.key)">
+          {{ lang.label }}
+        </button>
+      </div>
+
+      <!-- Instructions -->
+      <div class="drink-section instruction-block" *ngIf="drink[selectedLangKey]">
+        <h2>Instructions</h2>
+        <p>{{ drink[selectedLangKey] }}</p>
+      </div>
+    </div>
+  </div>
+</div>

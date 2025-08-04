@@ -1,0 +1,85 @@
+@use '../../../styles.scss' as *;
+
+.drink-detail-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: $spacing-lg;
+  font-family: $font-body;
+}
+
+.drink-detail-card {
+  display: flex;
+  gap: $spacing-lg;
+  flex-wrap: wrap;
+  background: $bg-light;
+  box-shadow: 0 4px 16px $shadow-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.drink-detail-image {
+  flex: 1 1 400px;
+  background: $bg-light-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: $border-radius;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.drink-detail-info {
+  flex: 2;
+  padding: $spacing-lg;
+}
+
+.drink-name {
+  font-family: $font-heading;
+  font-size: 2.5rem;
+  color: $text-color;
+  margin-bottom: $spacing-sm;
+  text-transform: capitalize;
+}
+
+.drink-subtitle {
+  color: $text-muted;
+  font-size: 1rem;
+  margin-bottom: $spacing-lg;
+}
+
+.drink-section {
+  margin-bottom: $spacing-lg;
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: $spacing-sm;
+    color: $text-color;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
+}
+
+.language-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.instruction-block {
+  background: $bg-section;
+  padding: $spacing-md;
+  border-radius: 8px;
+  color: $text-color;
+  line-height: 1.6;
+}

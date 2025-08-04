@@ -1,0 +1,9 @@
+<app-banner />
+<div class="drink-list container">
+    <h2 class="page-heading">Best Drinks</h2>
+    <mat-grid-list cols="4" rowHeight="4:4">
+        <mat-grid-tile *ngFor="let drink of drinks">
+            <app-drink-card [drink]="drink"></app-drink-card>
+        </mat-grid-tile>
+    </mat-grid-list>   
+</div>

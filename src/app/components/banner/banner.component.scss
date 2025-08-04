@@ -1,0 +1,35 @@
+@use '../../../styles.scss' as *;
+@use 'sass:color';
+
+.banner {
+  position: relative;
+  height: $banner-height;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-white;
+  background-image: $primary-gradient, url('/images/app-bg.jpeg');
+  top: -30px;
+  border-radius: $banner-radius;
+
+  .overlay {
+    padding: $spacing-lg;
+    text-align: center;
+    border-radius: 8px;
+    width: 100%;
+
+    .title {
+      font-size: $font-xl;
+      margin: 0;
+      font-family: $font-heading;
+    }
+
+    .subtitle {
+      font-size: $font-md;
+      margin-top: $spacing-md;
+      font-family: $font-body;
+    }
+  }
+}

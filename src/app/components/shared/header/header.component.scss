@@ -1,0 +1,79 @@
+@use 'sass:color'; // Import color module to use color manipulation functions.
+@use '../../../../styles.scss' as *; // Assuming you have your global variables here (e.g., $primary-color, $bg-light).
+
+.top-nav {
+  color: $text-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 64px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-family: $font-heading;
+
+   &.transparent {
+   background-color: transparent;
+   color: $bg-light;
+   box-shadow: none;
+  }
+
+  &.scrolled {
+    background-color: $bg-light;
+    color: $text-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .logo {
+      color: $text-color;
+    }
+  }
+
+  .container {
+    padding-top: $spacing-sm;
+    text-align: left;
+    width: 100%;
+    display: flex;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    
+    .highlight {
+      color: $accent-color;
+      font-family: $font-body;
+      font-weight: 500;
+    }
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .nav-links a {
+    margin-left: $spacing-md;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.active {
+      border-bottom: 2px solid $accent-color;
+    }
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  nav {
+    display: inline-block;
+  }
+}

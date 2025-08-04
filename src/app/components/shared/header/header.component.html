@@ -1,0 +1,17 @@
+<mat-toolbar [class.transparent]="transparentNavbar" [class.scrolled]="isScrolled" class="top-nav">
+    <div class="container">
+        <a mat-button href="/" class="logo">
+            <ng-container *ngIf="logoUrl; else textLogo">
+                <img [src]="logoUrl" [alt]="appName" class="logo-img" />
+            </ng-container>
+            <ng-template #textLogo>
+                {{ appName }}
+            </ng-template></a>
+        <span class="spacer"></span>
+        <nav class="nav-links" *ngIf="navLinks.length">
+            <a *ngFor="let link of navLinks" [routerLink]="link.path">
+                {{ link.label }}
+            </a>
+        </nav>
+    </div>
+</mat-toolbar>
